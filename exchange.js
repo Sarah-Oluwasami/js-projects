@@ -6,15 +6,24 @@ function submit(){
         axios(`https://v6.exchangerate-api.com/v6/cc02bc7972a0c8b71e9ac68b/latest/${inputValue}`)
         .then(serverData =>{
             let rate = serverData.data.conversion_rates
-            // let conversion = JSON.stringify(rate);
-            let conversion1 = Object.values(rate);
-            let conversion2 = Object.keys(rate);
+            let conversion = JSON.stringify(rate);
+            console.log(typeof (conversion))
 
-            console.log(typeof (conversion1))
-        document.getElementById('rate2').innerHTML=conversion2 +'<br>'
-        document.getElementById('rate1').innerHTML=conversion1
+            let newTable =  `<table>
+            <tr>
+                <th>Currency Code</th>
+                <th>Conversion Rates</th>
+            </tr>`
+            for(let value of conversion){
+               newTable += `<tr> <td> ${value.aed} </td> <td> ${value.afn} </td> <tr>`
+            }
+            newTable += "</table>";
+            document.getElementById("rate").innerHTML = newTable;
 
-        console.log(serverData.data.conversion_rates);
+        // document.getElementById('rate2').innerHTML=conversion2 +'<br>'
+        // document.getElementById('rate1').innerHTML=conversion1
+
+        console.log(serverData.data);
         }).catch(err =>{
             console.log(err)
         })
