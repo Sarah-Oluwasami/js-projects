@@ -1,0 +1,46 @@
+
+.profile {
+    width: 600px;
+    height: 870px;
+    margin: auto;
+    padding: 10px;
+    /* border-radius: 10px; */
+    box-shadow: 1px 1px 4px 4px rgb(175, 133, 133); 
+    background-color: rgba(255, 248, 248, 0.856);
+}
+
+.image{
+    padding: 20px;
+}
+
+img{
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.input-group{
+    width: 390px;
+}
+
+.form-control{
+    background-color: rgba(255, 248, 248, 0.856);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+
+.input-group-text{
+    background-color: rgba(255, 248, 248, 0.856);
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+
+#others{
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exchange.css">
+    <title>Exchange Rate</title>
+</head>
+<body>
+    
+    <div class="frame">
+        <select name="" id="select">
+            <option value="AED">UAE Dirham</option>
+            <option value="AFN">Afghan Afghani</option>
+            <option value="ALL">Albanian Lek</option>
+        </select>
+
+        <input type="submit" onclick="submit()">
+        <p id="rate2"><p id="rate1"></p></p>
+        <!-- <div class="rate" id="rate1">
+
+        </div>
+ -->
+    </div>
+
+    <select name="" id="first-code">
+        <option value="AED">UAE Dirham</option>
+        <option value="AFN">Afghan Afghani</option>
+        <option value="ALL">Albanian Lek</option>
+    </select>
+
+    <select name="" id="second-code">
+        <option value="AED">UAE Dirham</option>
+        <option value="AFN">Afghan Afghani</option>
+        <option value="ALL">Albanian Lek</option>
+    </select>
+
+    <input type="number" id="amount">
+
+    <input type="submit" onclick="submit1()">
+    <div id="display">
+        
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="exchange.js"></script>
+</body>
+</html>
